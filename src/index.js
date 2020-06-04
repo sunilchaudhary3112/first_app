@@ -4,13 +4,19 @@ import './index.css';
 import App from './App';
 import PropTypes from 'prop-types';
 import * as serviceWorker from './serviceWorker';
+import Menu from './components/Menu.js';
+import data from './data/recipes.json';
 
+// ReactDOM.render(
+//   <React.StrictMode>
+//     <App />
+//   </React.StrictMode>,
+//   document.getElementById('root')
+// );
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  <Menu recipes={data} />,
+  document.getElementById("root")
 );
 
 // If you want your app to work offline and load faster, you can change
