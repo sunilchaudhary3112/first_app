@@ -4,11 +4,19 @@ import logo from './logo.svg';
 import './App.css';
 
 
-
+const Button = (props) => {
+  const handleClick = (event) => {
+    event.preventDefault();
+    console.log('clicked');
+  }
+  return (
+    <button onClick={handleClick}> {props.name} </button>
+  );
+}
 
 function App() {
   return (
-    <div  className="App">
+    <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -22,9 +30,7 @@ function App() {
         >
           Learn React
         </a>
-        
-        
-        
+        <Button name="click us" className="btn" />
       </header>
     </div>
   );
